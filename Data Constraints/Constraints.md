@@ -15,10 +15,10 @@ CREATE TABLE Students (
 );
 ```
 
-{
+```
     ALTER TABLE Employees
     MODIFY Address varchar(255) NOT NULL;
-}
+```
 
 # UNIQUE 
     - Ensures that all values in a column are different
@@ -30,10 +30,10 @@ CREATE TABLE Students (
 );
 ```
 
-{
+```
     ALTER TABLE table_name
     ADD UNIQUE (column1, column2, ...);
-}
+```
 
 # PRIMARY KEY 
     - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
@@ -46,10 +46,10 @@ CREATE TABLE Students (
 );
 ```
 
-{
+```
     ALTER TABLE Employees
     ADD PRIMARY KEY (ID);
-}
+```
 
 # FOREIGN KEY 
     - Prevents actions that would destroy links between tables
@@ -63,11 +63,11 @@ CREATE TABLE Orders (
 );
 ```
 
-{
+```
     ALTER TABLE child_table
     ADD FOREIGN KEY (fk_column)
     REFERENCES parent_table (parent_key_column)
-}
+```
 
 # CHECK 
     - Ensures that the values in a column satisfies a specific condition
@@ -81,10 +81,10 @@ CREATE TABLE Students (
 );
 ```
 
-{
+```
     ALTER TABLE Employees
     ADD CONSTRAINT CHK_EmployeeAge CHECK (Age >= 21 AND Age <= 60);
-}
+```
 
 # DEFAULT 
     - Sets a default value for a column if no value is specified
