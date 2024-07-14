@@ -1,0 +1,7 @@
+BEGIN TRANSACTION;
+CREATE TABLE Employee (ID int,Name varchar(10)) ;
+INSERT INTO Employee(ID, Name) VALUES(1, 'John');
+SAVEPOINT SP1;
+ROLLBACK TO SAVEPOINT SP1;
+INSERT INTO Employee(ID, Name) VALUES(1, 'Jack');
+COMMIT ;
